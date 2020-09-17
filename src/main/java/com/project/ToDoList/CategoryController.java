@@ -2,17 +2,8 @@ package com.project.ToDoList;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class TasksController {
+public class CategoryController {
     @Autowired
     private TaskRepository taskRepository;
-
-    //createTask
-
-    //getTask
-
-    /************************/
-    //getTask(id)
-    //updateTask(id)
-    //deleteTask(id)
 
 }
