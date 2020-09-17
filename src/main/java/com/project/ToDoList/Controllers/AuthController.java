@@ -1,5 +1,6 @@
-package com.project.ToDoList;
+package com.project.ToDoList.Controllers;
 
+import com.project.ToDoList.Repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class AuthController {

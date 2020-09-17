@@ -1,11 +1,17 @@
-package com.project.ToDoList;
+package com.project.ToDoList.Controllers;
 
+import com.project.ToDoList.Repositories.UserRepository;
+import com.project.ToDoList.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import java.sql.Timestamp;
+
+import static java.lang.System.*;
 
 
 @RestController
@@ -21,6 +27,7 @@ public class MainController {
         user.setLogin(login);
         user.setPassword(password);
         user.setEmail(email);
+        user.setCreated_at(new Timestamp(currentTimeMillis()));
         userRepository.save(user);
         return "Saved";
     }

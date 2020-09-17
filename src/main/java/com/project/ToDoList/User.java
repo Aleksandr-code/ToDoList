@@ -1,9 +1,8 @@
 package com.project.ToDoList;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.sql.Date;
+import java.sql.Timestamp;
 
 @Entity(name = "users")
 public class User {
@@ -16,6 +15,12 @@ public class User {
     private String email;
 
     private String password;
+
+    private Timestamp created_at;
+    private Timestamp updated_at;
+
+    public User() {
+    }
 
     public Integer getId() {
         return id;
@@ -47,6 +52,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public void setCreated_at(Timestamp created_at) {
+        this.created_at = created_at;
+    }
+
+    public void setUpdated_at(Timestamp updated_at) {
+        this.updated_at = updated_at;
     }
 
 }
